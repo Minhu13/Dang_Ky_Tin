@@ -13,7 +13,7 @@ namespace Đăng_Ký_Tín
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormManager());
+            Application.Run(new FormLogin());
         }
     }
 }

@@ -51,6 +51,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(630, 260);
@@ -61,6 +62,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(654, 193);
@@ -71,6 +73,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(663, 124);
@@ -81,6 +84,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(567, 55);
@@ -91,6 +95,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(217, 260);
@@ -101,6 +106,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(189, 122);
@@ -111,6 +117,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(208, 191);
@@ -121,6 +128,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(191, 53);
@@ -131,6 +139,7 @@
             // 
             // txtTrgk
             // 
+            this.txtTrgk.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtTrgk.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTrgk.DefaultText = "";
             this.txtTrgk.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -152,6 +161,7 @@
             // 
             // txtTk
             // 
+            this.txtTk.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtTk.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTk.DefaultText = "";
             this.txtTk.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -173,6 +183,7 @@
             // 
             // txtqT
             // 
+            this.txtqT.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtqT.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtqT.DefaultText = "";
             this.txtqT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -194,6 +205,7 @@
             // 
             // txtqH
             // 
+            this.txtqH.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtqH.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtqH.DefaultText = "";
             this.txtqH.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -215,6 +227,7 @@
             // 
             // txtgt
             // 
+            this.txtgt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtgt.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtgt.DefaultText = "";
             this.txtgt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -236,6 +249,7 @@
             // 
             // txtns
             // 
+            this.txtns.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtns.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtns.DefaultText = "";
             this.txtns.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -257,6 +271,7 @@
             // 
             // txttgv
             // 
+            this.txttgv.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txttgv.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txttgv.DefaultText = "";
             this.txttgv.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -278,6 +293,7 @@
             // 
             // txtmgv
             // 
+            this.txtmgv.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtmgv.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtmgv.DefaultText = "";
             this.txtmgv.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -299,6 +315,7 @@
             // 
             // guna2PictureBox1
             // 
+            this.guna2PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2PictureBox1.Image = global::Đăng_Ký_Tín.Properties.Resources.z4376005680124_0d69f01b27bf30d014aab1929793cf71;
             this.guna2PictureBox1.ImageFlip = Guna.UI2.WinForms.Enums.FlipOrientation.Horizontal;
             this.guna2PictureBox1.ImageRotate = 0F;
@@ -311,6 +328,7 @@
             // 
             // btchangePS
             // 
+            this.btchangePS.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btchangePS.BorderRadius = 10;
             this.btchangePS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btchangePS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;

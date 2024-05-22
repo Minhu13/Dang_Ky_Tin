@@ -691,7 +691,7 @@
             this.panel3.Controls.Add(this.btFix);
             this.panel3.Location = new System.Drawing.Point(10, 57);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1276, 578);
+            this.panel3.Size = new System.Drawing.Size(1255, 578);
             this.panel3.TabIndex = 81;
             // 
             // btAgain
@@ -838,7 +838,7 @@
             this.panel4.Controls.Add(this.txtTC);
             this.panel4.Location = new System.Drawing.Point(11, 2428);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1275, 567);
+            this.panel4.Size = new System.Drawing.Size(1254, 567);
             this.panel4.TabIndex = 82;
             // 
             // btAgainLHP
@@ -922,7 +922,7 @@
             this.tbLHP.RowHeadersVisible = false;
             this.tbLHP.RowHeadersWidth = 51;
             this.tbLHP.RowTemplate.Height = 24;
-            this.tbLHP.Size = new System.Drawing.Size(1271, 163);
+            this.tbLHP.Size = new System.Drawing.Size(1250, 163);
             this.tbLHP.TabIndex = 90;
             this.tbLHP.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.tbLHP.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -1074,7 +1074,7 @@
             this.panel5.Controls.Add(this.btFixGV);
             this.panel5.Location = new System.Drawing.Point(10, 682);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1276, 520);
+            this.panel5.Size = new System.Drawing.Size(1255, 520);
             this.panel5.TabIndex = 84;
             // 
             // cbKhoaGV
@@ -1159,7 +1159,7 @@
             this.tbGv.RowHeadersVisible = false;
             this.tbGv.RowHeadersWidth = 51;
             this.tbGv.RowTemplate.Height = 24;
-            this.tbGv.Size = new System.Drawing.Size(1270, 148);
+            this.tbGv.Size = new System.Drawing.Size(1249, 148);
             this.tbGv.TabIndex = 61;
             this.tbGv.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.tbGv.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -1494,7 +1494,7 @@
             this.tbSV.RowHeadersVisible = false;
             this.tbSV.RowHeadersWidth = 51;
             this.tbSV.RowTemplate.Height = 24;
-            this.tbSV.Size = new System.Drawing.Size(1163, 148);
+            this.tbSV.Size = new System.Drawing.Size(1142, 148);
             this.tbSV.TabIndex = 60;
             this.tbSV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.tbSV.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -1540,7 +1540,7 @@
             this.panel7.Controls.Add(this.btFixLop);
             this.panel7.Location = new System.Drawing.Point(10, 1267);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1276, 451);
+            this.panel7.Size = new System.Drawing.Size(1255, 451);
             this.panel7.TabIndex = 87;
             // 
             // btAgainLop
@@ -1609,7 +1609,7 @@
             this.tbLop.RowHeadersVisible = false;
             this.tbLop.RowHeadersWidth = 51;
             this.tbLop.RowTemplate.Height = 24;
-            this.tbLop.Size = new System.Drawing.Size(1270, 148);
+            this.tbLop.Size = new System.Drawing.Size(1249, 148);
             this.tbLop.TabIndex = 61;
             this.tbLop.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.tbLop.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -1855,7 +1855,7 @@
             this.panel9.Controls.Add(this.btUD_AC);
             this.panel9.Location = new System.Drawing.Point(11, 1790);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1275, 562);
+            this.panel9.Size = new System.Drawing.Size(1254, 562);
             this.panel9.TabIndex = 90;
             // 
             // txtMgvAC
@@ -1983,7 +1983,7 @@
             this.tbAC.RowHeadersVisible = false;
             this.tbAC.RowHeadersWidth = 51;
             this.tbAC.RowTemplate.Height = 24;
-            this.tbAC.Size = new System.Drawing.Size(1269, 148);
+            this.tbAC.Size = new System.Drawing.Size(1248, 148);
             this.tbAC.TabIndex = 61;
             this.tbAC.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.tbAC.ThemeStyle.AlternatingRowsStyle.Font = null;
