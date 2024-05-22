@@ -141,7 +141,6 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.label38 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.txtMgvAC = new Guna.UI2.WinForms.Guna2TextBox();
             this.label42 = new System.Windows.Forms.Label();
             this.cbVaiTro = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label41 = new System.Windows.Forms.Label();
@@ -151,7 +150,6 @@
             this.label19 = new System.Windows.Forms.Label();
             this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPW = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtMsvAC = new Guna.UI2.WinForms.Guna2TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
@@ -160,6 +158,8 @@
             this.btUD_AC = new Guna.UI2.WinForms.Guna2Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label40 = new System.Windows.Forms.Label();
+            this.cbMsvAC = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbMgvAC = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbLHP)).BeginInit();
@@ -1836,7 +1836,8 @@
             this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.txtMgvAC);
+            this.panel9.Controls.Add(this.cbMgvAC);
+            this.panel9.Controls.Add(this.cbMsvAC);
             this.panel9.Controls.Add(this.label42);
             this.panel9.Controls.Add(this.cbVaiTro);
             this.panel9.Controls.Add(this.label41);
@@ -1846,7 +1847,6 @@
             this.panel9.Controls.Add(this.label19);
             this.panel9.Controls.Add(this.txtUser);
             this.panel9.Controls.Add(this.txtPW);
-            this.panel9.Controls.Add(this.txtMsvAC);
             this.panel9.Controls.Add(this.label36);
             this.panel9.Controls.Add(this.label37);
             this.panel9.Controls.Add(this.label39);
@@ -1857,27 +1857,6 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(1254, 562);
             this.panel9.TabIndex = 90;
-            // 
-            // txtMgvAC
-            // 
-            this.txtMgvAC.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMgvAC.DefaultText = "";
-            this.txtMgvAC.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMgvAC.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMgvAC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMgvAC.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMgvAC.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMgvAC.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtMgvAC.ForeColor = System.Drawing.Color.Black;
-            this.txtMgvAC.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMgvAC.Location = new System.Drawing.Point(660, 145);
-            this.txtMgvAC.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtMgvAC.Name = "txtMgvAC";
-            this.txtMgvAC.PasswordChar = '\0';
-            this.txtMgvAC.PlaceholderText = "";
-            this.txtMgvAC.SelectedText = "";
-            this.txtMgvAC.Size = new System.Drawing.Size(270, 40);
-            this.txtMgvAC.TabIndex = 70;
             // 
             // label42
             // 
@@ -2006,6 +1985,7 @@
             this.tbAC.ThemeStyle.RowsStyle.Height = 24;
             this.tbAC.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.tbAC.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.tbAC.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tbAC_CellContentClick);
             // 
             // label19
             // 
@@ -2058,27 +2038,6 @@
             this.txtPW.SelectedText = "";
             this.txtPW.Size = new System.Drawing.Size(270, 40);
             this.txtPW.TabIndex = 31;
-            // 
-            // txtMsvAC
-            // 
-            this.txtMsvAC.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMsvAC.DefaultText = "";
-            this.txtMsvAC.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMsvAC.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMsvAC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMsvAC.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMsvAC.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMsvAC.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtMsvAC.ForeColor = System.Drawing.Color.Black;
-            this.txtMsvAC.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMsvAC.Location = new System.Drawing.Point(660, 94);
-            this.txtMsvAC.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtMsvAC.Name = "txtMsvAC";
-            this.txtMsvAC.PasswordChar = '\0';
-            this.txtMsvAC.PlaceholderText = "";
-            this.txtMsvAC.SelectedText = "";
-            this.txtMsvAC.Size = new System.Drawing.Size(270, 40);
-            this.txtMsvAC.TabIndex = 33;
             // 
             // label36
             // 
@@ -2188,6 +2147,44 @@
             this.label40.Size = new System.Drawing.Size(151, 23);
             this.label40.TabIndex = 88;
             this.label40.Text = "Quản lý tài khoản";
+            // 
+            // cbMsvAC
+            // 
+            this.cbMsvAC.BackColor = System.Drawing.Color.Transparent;
+            this.cbMsvAC.BorderColor = System.Drawing.Color.Black;
+            this.cbMsvAC.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbMsvAC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMsvAC.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbMsvAC.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbMsvAC.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbMsvAC.ForeColor = System.Drawing.Color.Black;
+            this.cbMsvAC.ItemHeight = 30;
+            this.cbMsvAC.Items.AddRange(new object[] {
+            "Admin",
+            "User"});
+            this.cbMsvAC.Location = new System.Drawing.Point(660, 98);
+            this.cbMsvAC.Name = "cbMsvAC";
+            this.cbMsvAC.Size = new System.Drawing.Size(270, 36);
+            this.cbMsvAC.TabIndex = 72;
+            // 
+            // cbMgvAC
+            // 
+            this.cbMgvAC.BackColor = System.Drawing.Color.Transparent;
+            this.cbMgvAC.BorderColor = System.Drawing.Color.Black;
+            this.cbMgvAC.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbMgvAC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMgvAC.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbMgvAC.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbMgvAC.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbMgvAC.ForeColor = System.Drawing.Color.Black;
+            this.cbMgvAC.ItemHeight = 30;
+            this.cbMgvAC.Items.AddRange(new object[] {
+            "Admin",
+            "User"});
+            this.cbMgvAC.Location = new System.Drawing.Point(660, 149);
+            this.cbMgvAC.Name = "cbMgvAC";
+            this.cbMgvAC.Size = new System.Drawing.Size(270, 36);
+            this.cbMgvAC.TabIndex = 73;
             // 
             // Admin
             // 
@@ -2340,7 +2337,6 @@
         private System.Windows.Forms.Label label19;
         private Guna.UI2.WinForms.Guna2TextBox txtUser;
         private Guna.UI2.WinForms.Guna2TextBox txtPW;
-        private Guna.UI2.WinForms.Guna2TextBox txtMsvAC;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label39;
@@ -2351,7 +2347,8 @@
         private System.Windows.Forms.Label label40;
         private Guna.UI2.WinForms.Guna2ComboBox cbVaiTro;
         private System.Windows.Forms.Label label41;
-        private Guna.UI2.WinForms.Guna2TextBox txtMgvAC;
         private System.Windows.Forms.Label label42;
+        private Guna.UI2.WinForms.Guna2ComboBox cbMgvAC;
+        private Guna.UI2.WinForms.Guna2ComboBox cbMsvAC;
     }
 }

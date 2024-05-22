@@ -658,6 +658,38 @@ namespace Đăng_Ký_Tín.DAO
 
             return mdkList;
         }
+        public List<string> GetMsv_ACList()
+        {
+            List<string> msvList = new List<string>();
+
+            string query = "SELECT MaSinhVien FROM SinhVien";
+
+            DataTable data = ExecuteQuery(query);
+
+            foreach (DataRow row in data.Rows)
+            {
+                string msv = row["MaSinhVien"].ToString();
+                msvList.Add(msv);
+            }
+
+            return msvList;
+        }
+        public List<string> GetMgv_ACList()
+        {
+            List<string> mgvList = new List<string>();
+
+            string query = "SELECT MaGiangVien FROM GiangVien";
+
+            DataTable data = ExecuteQuery(query);
+
+            foreach (DataRow row in data.Rows)
+            {
+                string mgv = row["MaGiangVien"].ToString();
+                mgvList.Add(mgv);
+            }
+
+            return mgvList;
+        }
         public int ExecuteNonQuery(string query)
         {
             using (SqlConnection connection = new SqlConnection(connectionSTR))
@@ -823,7 +855,126 @@ namespace Đăng_Ký_Tín.DAO
                 return rowsAffected > 0; // Return true if at least one row was inserted into the database
             }
         }
+        public bool UpdateAC(string tuser, string pass, string vaitro, string msv, string magv)
+        {
+            string query = @"
+            UPDATE Account
+            SET Password = @pass,
+                Vaitro = @vtro,
+                MaSinhVien = @msv,
+                MaGiangVien = @magv
+            WHERE Username = @tuser";
 
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@tuser", tuser);
+                command.Parameters.AddWithValue("@pass", pass);
+                command.Parameters.AddWithValue("@vtro", vaitro);
+                // Nếu msv là null, gán giá trị DBNull.Value
+                if (msv == null)
+                {
+                    command.Parameters.AddWithValue("@msv", DBNull.Value);
+                }
+                else
+                {
+                    command.Parameters.AddWithValue("@msv", msv);
+                }
+
+                // Nếu magv là null, gán giá trị DBNull.Value
+                if (magv == null)
+                {
+                    command.Parameters.AddWithValue("@magv", DBNull.Value);
+                }
+                else
+                {
+                    command.Parameters.AddWithValue("@magv", magv);
+                }
+
+                connection.Open();
+                int rowsAffected = command.ExecuteNonQuery();
+                connection.Close();
+
+                return rowsAffected > 0; // Trả về true nếu có ít nhất một hàng được cập nhật
+            }
+        }
+        public bool DeleteAC(string tuser, string pass, string vaitro, string msv, string magv)
+        {
+            string query = @"
+               DELETE Account WHERE Username = @tuser";
+
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@tuser", tuser);
+                command.Parameters.AddWithValue("@pass", pass);
+                command.Parameters.AddWithValue("@vtro", vaitro);
+                // Nếu msv là null, gán giá trị DBNull.Value
+                if (msv == null)
+                {
+                    command.Parameters.AddWithValue("@msv", DBNull.Value);
+                }
+                else
+                {
+                    command.Parameters.AddWithValue("@msv", msv);
+                }
+
+                // Nếu magv là null, gán giá trị DBNull.Value
+                if (magv == null)
+                {
+                    command.Parameters.AddWithValue("@magv", DBNull.Value);
+                }
+                else
+                {
+                    command.Parameters.AddWithValue("@magv", magv);
+                }
+
+                connection.Open();
+                int rowsAffected = command.ExecuteNonQuery();
+                connection.Close();
+
+                return rowsAffected > 0; // Trả về true nếu có ít nhất một hàng được cập nhật
+            }
+        }
+        public DataTable SearchAC(string tuser, string vaitro)
+        {
+            string query = @"
+            SELECT
+                Username AS 'Tên tài khoản',
+                Password AS 'Mật khẩu',
+                Vaitro AS 'Vai trò',
+                MaSinhVien AS 'Mã sinh viên',
+                MaGiangVien AS 'Mã giảng viên'
+            FROM 
+            Account
+            WHERE Username LIKE @tuser OR Vaitro LIKE @vtro";
+
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@tuser", "%" + tuser + "%");
+                command.Parameters.AddWithValue("@maSinhVien", "%" + vaitro + "%");
+
+                DataTable dataTable = new DataTable();
+
+                try
+                {
+                    connection.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    adapter.Fill(dataTable);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+
+                return dataTable;
+            }
+        }
     }
 }
 

@@ -23,7 +23,7 @@ namespace Đăng_Ký_Tín
             FillCbLopHP();
             Fillmgv();
             Fillmdk();
-
+            FillcbMaSV_MaGV();
         }
 
         // Phương thức điền dữ liệu vào ComboBox cho Tên ngành
@@ -68,8 +68,17 @@ namespace Đăng_Ký_Tín
 
             cbKhoa.Items.Clear();
             cbKhoa.Items.AddRange(tenKhoaList.ToArray());
+        }
+        private void FillcbMaSV_MaGV()
+        {
+            List<string> msvList = provider.GetMsv_ACList();
 
-            cbKhoaGV.Items.AddRange(tenKhoaList.ToArray());
+            cbMsvAC.Items.Clear();
+            cbMsvAC.Items.AddRange(msvList.ToArray());
+
+            List<string> mgvList = provider.GetMgv_ACList();
+            cbMgvAC.Items.Clear();
+            cbMgvAC.Items.AddRange(mgvList.ToArray());
         }
 
         private void btnThemSinhVien_Click(object sender, EventArgs e)
@@ -213,16 +222,7 @@ namespace Đăng_Ký_Tín
                         tbSV.DataSource = searchResult;
                         //MessageBox.Show("Tìm thấy sinh viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    //    else
-                    //    {
-                    //        // Nếu không tìm thấy kết quả
-                    //        //MessageBox.Show("Không tìm thấy sinh viên nào phù hợp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //    }
                 }
-                //else
-                //{
-                //    MessageBox.Show("Vui lòng nhập từ khóa để tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                //}
             }
             catch (Exception ex)
             {
@@ -932,8 +932,8 @@ namespace Đăng_Ký_Tín
                 string tuser = txtUser.Text;
                 string pass = txtPW.Text;
                 string vaitro = cbVaiTro.SelectedItem.ToString();
-                string msv = txtMsvAC.Text;
-                string magv = txtMgvAC.Text;
+                string msv = cbMsvAC.SelectedItem == null ? null : cbMsvAC.SelectedItem.ToString();
+                string magv = cbMgvAC.SelectedItem == null ? null : cbMgvAC.SelectedItem.ToString();
 
                 // Tạo một instance của DataProvider
                 DataProvider provider = new DataProvider();
@@ -944,7 +944,6 @@ namespace Đăng_Ký_Tín
                 if (addSuccess)
                 {
                     MessageBox.Show("Thêm tài khoản mới thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    // Sau khi thêm lớp học phần thành công
                     LoadDataACDataGridView();
                 }
                 else
@@ -960,18 +959,111 @@ namespace Đăng_Ký_Tín
 
         private void btUD_AC_Click(object sender, EventArgs e)
         {
+            try
+            {
+                // Lấy thông tin từ các TextBox và ComboBox trên giao diện người dùng
+                string tuser = txtUser.Text;
+                string pass = txtPW.Text;
+                string vaitro = cbVaiTro.SelectedItem.ToString();
+                string msv = cbMsvAC.SelectedItem == null ? null : cbMsvAC.SelectedItem.ToString();
+                string magv = cbMgvAC.SelectedItem == null ? null : cbMgvAC.SelectedItem.ToString();
 
+                DataProvider provider = new DataProvider();
+
+                bool updateSuccess = provider.UpdateAC(tuser, pass, vaitro, msv, magv);
+
+                if (updateSuccess)
+                {
+
+                    MessageBox.Show("Sửa tài khoản thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadDataACDataGridView();
+                }
+                else
+                {
+                    MessageBox.Show("Không thể sửa tài khoản. Vui lòng thử lại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btDelete_AC_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string tuser = txtUser.Text;
+                string pass = txtPW.Text;
+                string vaitro = cbVaiTro.SelectedItem.ToString();
+                string msv = cbMsvAC.SelectedItem == null ? null : cbMsvAC.SelectedItem.ToString();
+                string magv = cbMgvAC.SelectedItem == null ? null : cbMgvAC.SelectedItem.ToString();
 
+                // Tạo một instance của DataProvider
+                DataProvider provider = new DataProvider();
+
+                // Gọi phương thức DeleteStudent để thêm sinh viên mới vào cơ sở dữ liệu
+                bool DeleteSuccess = provider.DeleteAC(tuser, pass, vaitro, msv, magv);
+
+                if (DeleteSuccess)
+                {
+                    // Thông báo thành công
+                    MessageBox.Show("Xóa sinh viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Sau khi xóa sinh viên thành công, làm mới DataGridView
+                    LoadDataACDataGridView();
+                }
+                else
+                {
+                    // Thông báo thất bại
+                    MessageBox.Show("Không thể xóa sinh viên. Vui lòng thử lại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Xử lý ngoại lệ nếu có lỗi xảy ra
+                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void txtSearchAC_TextChanged(object sender, EventArgs e)
         {
+            try
+            {
+                string keyword = txtSearchAC.Text.Trim(); // Lấy từ khóa tìm kiếm từ TextBox và xóa khoảng trắng thừa
 
+                if (!string.IsNullOrEmpty(keyword))
+                {
+                    // Gọi phương thức tìm kiếm theo tên giảng viên từ DataProvider
+                    DataProvider provider = new DataProvider();
+                    DataTable searchResult = provider.SearchAC(keyword,keyword);
+
+                    if (searchResult.Rows.Count > 0)
+                    {
+                        tbAC.DataSource = searchResult;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
+        private void tbAC_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Kiểm tra nếu chỉ số dòng không phải là chỉ số header và không là dòng trống
+            if (e.RowIndex >= 0 && e.RowIndex < tbAC.Rows.Count - 1)
+            {
+                // Lấy dòng được chọn
+                DataGridViewRow row = tbAC.Rows[e.RowIndex];
+                // Hiển thị thông tin sinh viên lên các điều khiển trên form
+                txtUser.Text = row.Cells["Tên tài khoản"].Value.ToString();
+                txtPW.Text = row.Cells["Mật khẩu"].Value.ToString();
+                cbVaiTro.SelectedItem = row.Cells["Vai trò"].Value.ToString();
+                cbMsvAC.SelectedItem = row.Cells["Mã sinh viên"].Value.ToString();
+                cbMgvAC.SelectedItem = row.Cells["Mã giảng viên"].Value.ToString();
+            }
+        }
     }
 }
