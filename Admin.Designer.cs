@@ -135,12 +135,13 @@
             this.label32 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.txtSearchLop = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btSearchLop = new Guna.UI2.WinForms.Guna2Button();
             this.btAddLop = new Guna.UI2.WinForms.Guna2Button();
             this.btFixLop = new Guna.UI2.WinForms.Guna2Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label38 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.cbMgvAC = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbMsvAC = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label42 = new System.Windows.Forms.Label();
             this.cbVaiTro = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label41 = new System.Windows.Forms.Label();
@@ -158,8 +159,6 @@
             this.btUD_AC = new Guna.UI2.WinForms.Guna2Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label40 = new System.Windows.Forms.Label();
-            this.cbMsvAC = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cbMgvAC = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbLHP)).BeginInit();
@@ -205,7 +204,7 @@
             this.txtqT.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtqT.ForeColor = System.Drawing.Color.Black;
             this.txtqT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtqT.Location = new System.Drawing.Point(661, 143);
+            this.txtqT.Location = new System.Drawing.Point(661, 146);
             this.txtqT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtqT.Name = "txtqT";
             this.txtqT.PasswordChar = '\0';
@@ -269,7 +268,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(34, 23);
+            this.label2.Location = new System.Drawing.Point(13, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(169, 23);
             this.label2.TabIndex = 35;
@@ -278,7 +277,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Location = new System.Drawing.Point(38, 49);
+            this.panel1.Location = new System.Drawing.Point(17, 49);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(343, 2);
             this.panel1.TabIndex = 36;
@@ -297,7 +296,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(34, 162);
+            this.label4.Location = new System.Drawing.Point(34, 164);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 20);
             this.label4.TabIndex = 38;
@@ -317,7 +316,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(22, 262);
+            this.label6.Location = new System.Drawing.Point(22, 264);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 20);
             this.label6.TabIndex = 40;
@@ -347,7 +346,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(24, 314);
+            this.label9.Location = new System.Drawing.Point(29, 314);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(61, 20);
             this.label9.TabIndex = 43;
@@ -357,7 +356,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(563, 213);
+            this.label10.Location = new System.Drawing.Point(563, 212);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(80, 20);
             this.label10.TabIndex = 44;
@@ -367,7 +366,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(572, 262);
+            this.label11.Location = new System.Drawing.Point(572, 261);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(71, 20);
             this.label11.TabIndex = 45;
@@ -409,7 +408,7 @@
             // 
             this.txtSearchKeyword.AutoRoundedCorners = true;
             this.txtSearchKeyword.BorderColor = System.Drawing.Color.LightGray;
-            this.txtSearchKeyword.BorderRadius = 19;
+            this.txtSearchKeyword.BorderRadius = 20;
             this.txtSearchKeyword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSearchKeyword.DefaultText = "";
             this.txtSearchKeyword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -430,7 +429,7 @@
             this.txtSearchKeyword.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtSearchKeyword.PlaceholderText = "Tìm sinh viên";
             this.txtSearchKeyword.SelectedText = "";
-            this.txtSearchKeyword.Size = new System.Drawing.Size(355, 41);
+            this.txtSearchKeyword.Size = new System.Drawing.Size(419, 43);
             this.txtSearchKeyword.TabIndex = 51;
             this.txtSearchKeyword.Tag = "";
             this.txtSearchKeyword.TextChanged += new System.EventHandler(this.txtSearchKeyword_TextChanged);
@@ -532,7 +531,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(79, 146);
+            this.label20.Location = new System.Drawing.Point(84, 146);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(65, 20);
             this.label20.TabIndex = 61;
@@ -542,7 +541,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(71, 194);
+            this.label21.Location = new System.Drawing.Point(76, 194);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(73, 20);
             this.label21.TabIndex = 60;
@@ -602,7 +601,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(16, 98);
+            this.label14.Location = new System.Drawing.Point(21, 98);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(128, 20);
             this.label14.TabIndex = 78;
@@ -654,7 +653,7 @@
             this.txtSearchSJ.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtSearchSJ.PlaceholderText = "Tìm môn học";
             this.txtSearchSJ.SelectedText = "";
-            this.txtSearchSJ.Size = new System.Drawing.Size(355, 43);
+            this.txtSearchSJ.Size = new System.Drawing.Size(419, 43);
             this.txtSearchSJ.TabIndex = 79;
             this.txtSearchSJ.Tag = "";
             this.txtSearchSJ.TextChanged += new System.EventHandler(this.txtSearchSJ_TextChanged);
@@ -691,7 +690,7 @@
             this.panel3.Controls.Add(this.btFix);
             this.panel3.Location = new System.Drawing.Point(10, 57);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1255, 578);
+            this.panel3.Size = new System.Drawing.Size(1276, 578);
             this.panel3.TabIndex = 81;
             // 
             // btAgain
@@ -769,7 +768,7 @@
             this.cbNganh.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbNganh.ForeColor = System.Drawing.Color.Black;
             this.cbNganh.ItemHeight = 30;
-            this.cbNganh.Location = new System.Drawing.Point(661, 196);
+            this.cbNganh.Location = new System.Drawing.Point(661, 198);
             this.cbNganh.Name = "cbNganh";
             this.cbNganh.Size = new System.Drawing.Size(270, 36);
             this.cbNganh.TabIndex = 58;
@@ -838,7 +837,7 @@
             this.panel4.Controls.Add(this.txtTC);
             this.panel4.Location = new System.Drawing.Point(11, 2428);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1254, 567);
+            this.panel4.Size = new System.Drawing.Size(1275, 567);
             this.panel4.TabIndex = 82;
             // 
             // btAgainLHP
@@ -854,7 +853,7 @@
             this.btAgainLHP.Name = "btAgainLHP";
             this.btAgainLHP.Size = new System.Drawing.Size(129, 41);
             this.btAgainLHP.TabIndex = 93;
-            this.btAgainLHP.Text = "Nhập lại:";
+            this.btAgainLHP.Text = "Nhập lại";
             this.btAgainLHP.Click += new System.EventHandler(this.btAgainLHP_Click);
             // 
             // cbMDK
@@ -866,7 +865,7 @@
             this.cbMDK.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbMDK.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbMDK.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbMDK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbMDK.ForeColor = System.Drawing.Color.Black;
             this.cbMDK.ItemHeight = 30;
             this.cbMDK.Location = new System.Drawing.Point(173, 227);
             this.cbMDK.Name = "cbMDK";
@@ -922,7 +921,7 @@
             this.tbLHP.RowHeadersVisible = false;
             this.tbLHP.RowHeadersWidth = 51;
             this.tbLHP.RowTemplate.Height = 24;
-            this.tbLHP.Size = new System.Drawing.Size(1250, 163);
+            this.tbLHP.Size = new System.Drawing.Size(1271, 163);
             this.tbLHP.TabIndex = 90;
             this.tbLHP.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.tbLHP.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -977,7 +976,7 @@
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(84, 242);
+            this.label33.Location = new System.Drawing.Point(89, 242);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(60, 20);
             this.label33.TabIndex = 86;
@@ -992,7 +991,7 @@
             this.cbHKHP.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbHKHP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbHKHP.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbHKHP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbHKHP.ForeColor = System.Drawing.Color.Black;
             this.cbHKHP.ItemHeight = 30;
             this.cbHKHP.Items.AddRange(new object[] {
             "Chọn học kỳ",
@@ -1025,7 +1024,7 @@
             this.cbLHP.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbLHP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbLHP.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbLHP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbLHP.ForeColor = System.Drawing.Color.Black;
             this.cbLHP.ItemHeight = 30;
             this.cbLHP.Location = new System.Drawing.Point(173, 129);
             this.cbLHP.Name = "cbLHP";
@@ -1074,7 +1073,7 @@
             this.panel5.Controls.Add(this.btFixGV);
             this.panel5.Location = new System.Drawing.Point(10, 682);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1255, 520);
+            this.panel5.Size = new System.Drawing.Size(1276, 520);
             this.panel5.TabIndex = 84;
             // 
             // cbKhoaGV
@@ -1159,7 +1158,7 @@
             this.tbGv.RowHeadersVisible = false;
             this.tbGv.RowHeadersWidth = 51;
             this.tbGv.RowTemplate.Height = 24;
-            this.tbGv.Size = new System.Drawing.Size(1249, 148);
+            this.tbGv.Size = new System.Drawing.Size(1270, 148);
             this.tbGv.TabIndex = 61;
             this.tbGv.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.tbGv.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -1364,7 +1363,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(578, 165);
+            this.label27.Location = new System.Drawing.Point(583, 164);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(62, 20);
             this.label27.TabIndex = 42;
@@ -1374,7 +1373,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(560, 214);
+            this.label29.Location = new System.Drawing.Point(574, 214);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(71, 20);
             this.label29.TabIndex = 44;
@@ -1384,7 +1383,7 @@
             // 
             this.txtSearchGV.AutoRoundedCorners = true;
             this.txtSearchGV.BorderColor = System.Drawing.Color.LightGray;
-            this.txtSearchGV.BorderRadius = 19;
+            this.txtSearchGV.BorderRadius = 20;
             this.txtSearchGV.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSearchGV.DefaultText = "";
             this.txtSearchGV.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -1405,7 +1404,7 @@
             this.txtSearchGV.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtSearchGV.PlaceholderText = "Tìm giảng viên";
             this.txtSearchGV.SelectedText = "";
-            this.txtSearchGV.Size = new System.Drawing.Size(355, 41);
+            this.txtSearchGV.Size = new System.Drawing.Size(419, 43);
             this.txtSearchGV.TabIndex = 51;
             this.txtSearchGV.Tag = "";
             this.txtSearchGV.TextChanged += new System.EventHandler(this.txtSearchGV_TextChanged);
@@ -1494,7 +1493,7 @@
             this.tbSV.RowHeadersVisible = false;
             this.tbSV.RowHeadersWidth = 51;
             this.tbSV.RowTemplate.Height = 24;
-            this.tbSV.Size = new System.Drawing.Size(1142, 148);
+            this.tbSV.Size = new System.Drawing.Size(1266, 148);
             this.tbSV.TabIndex = 60;
             this.tbSV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.tbSV.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -1535,12 +1534,11 @@
             this.panel7.Controls.Add(this.label32);
             this.panel7.Controls.Add(this.label35);
             this.panel7.Controls.Add(this.txtSearchLop);
-            this.panel7.Controls.Add(this.btSearchLop);
             this.panel7.Controls.Add(this.btAddLop);
             this.panel7.Controls.Add(this.btFixLop);
             this.panel7.Location = new System.Drawing.Point(10, 1267);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1255, 451);
+            this.panel7.Size = new System.Drawing.Size(1276, 451);
             this.panel7.TabIndex = 87;
             // 
             // btAgainLop
@@ -1609,7 +1607,7 @@
             this.tbLop.RowHeadersVisible = false;
             this.tbLop.RowHeadersWidth = 51;
             this.tbLop.RowTemplate.Height = 24;
-            this.tbLop.Size = new System.Drawing.Size(1249, 148);
+            this.tbLop.Size = new System.Drawing.Size(1270, 148);
             this.tbLop.TabIndex = 61;
             this.tbLop.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.tbLop.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -1740,7 +1738,7 @@
             // 
             this.txtSearchLop.AutoRoundedCorners = true;
             this.txtSearchLop.BorderColor = System.Drawing.Color.LightGray;
-            this.txtSearchLop.BorderRadius = 19;
+            this.txtSearchLop.BorderRadius = 20;
             this.txtSearchLop.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSearchLop.DefaultText = "";
             this.txtSearchLop.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -1761,25 +1759,10 @@
             this.txtSearchLop.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtSearchLop.PlaceholderText = "Tìm lớp";
             this.txtSearchLop.SelectedText = "";
-            this.txtSearchLop.Size = new System.Drawing.Size(355, 41);
+            this.txtSearchLop.Size = new System.Drawing.Size(419, 43);
             this.txtSearchLop.TabIndex = 51;
             this.txtSearchLop.Tag = "";
-            // 
-            // btSearchLop
-            // 
-            this.btSearchLop.BorderRadius = 18;
-            this.btSearchLop.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btSearchLop.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btSearchLop.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btSearchLop.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btSearchLop.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSearchLop.ForeColor = System.Drawing.Color.White;
-            this.btSearchLop.Location = new System.Drawing.Point(436, 19);
-            this.btSearchLop.Name = "btSearchLop";
-            this.btSearchLop.Size = new System.Drawing.Size(110, 41);
-            this.btSearchLop.TabIndex = 52;
-            this.btSearchLop.Text = "Tìm";
-            this.btSearchLop.Click += new System.EventHandler(this.btSearchLop_Click);
+            this.txtSearchLop.TextChanged += new System.EventHandler(this.txtSearchLop_TextChanged);
             // 
             // btAddLop
             // 
@@ -1855,8 +1838,46 @@
             this.panel9.Controls.Add(this.btUD_AC);
             this.panel9.Location = new System.Drawing.Point(11, 1790);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1254, 562);
+            this.panel9.Size = new System.Drawing.Size(1275, 562);
             this.panel9.TabIndex = 90;
+            // 
+            // cbMgvAC
+            // 
+            this.cbMgvAC.BackColor = System.Drawing.Color.Transparent;
+            this.cbMgvAC.BorderColor = System.Drawing.Color.Black;
+            this.cbMgvAC.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbMgvAC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMgvAC.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbMgvAC.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbMgvAC.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbMgvAC.ForeColor = System.Drawing.Color.Black;
+            this.cbMgvAC.ItemHeight = 30;
+            this.cbMgvAC.Items.AddRange(new object[] {
+            "Admin",
+            "User"});
+            this.cbMgvAC.Location = new System.Drawing.Point(660, 149);
+            this.cbMgvAC.Name = "cbMgvAC";
+            this.cbMgvAC.Size = new System.Drawing.Size(270, 36);
+            this.cbMgvAC.TabIndex = 73;
+            // 
+            // cbMsvAC
+            // 
+            this.cbMsvAC.BackColor = System.Drawing.Color.Transparent;
+            this.cbMsvAC.BorderColor = System.Drawing.Color.Black;
+            this.cbMsvAC.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbMsvAC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMsvAC.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbMsvAC.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbMsvAC.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbMsvAC.ForeColor = System.Drawing.Color.Black;
+            this.cbMsvAC.ItemHeight = 30;
+            this.cbMsvAC.Items.AddRange(new object[] {
+            "Admin",
+            "User"});
+            this.cbMsvAC.Location = new System.Drawing.Point(660, 98);
+            this.cbMsvAC.Name = "cbMsvAC";
+            this.cbMsvAC.Size = new System.Drawing.Size(270, 36);
+            this.cbMsvAC.TabIndex = 72;
             // 
             // label42
             // 
@@ -1882,7 +1903,7 @@
             this.cbVaiTro.Items.AddRange(new object[] {
             "Admin",
             "User"});
-            this.cbVaiTro.Location = new System.Drawing.Point(128, 201);
+            this.cbVaiTro.Location = new System.Drawing.Point(128, 200);
             this.cbVaiTro.Name = "cbVaiTro";
             this.cbVaiTro.Size = new System.Drawing.Size(270, 36);
             this.cbVaiTro.TabIndex = 69;
@@ -1891,7 +1912,7 @@
             // 
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(44, 219);
+            this.label41.Location = new System.Drawing.Point(57, 218);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(55, 20);
             this.label41.TabIndex = 68;
@@ -1911,6 +1932,7 @@
             this.btAgainAC.Size = new System.Drawing.Size(129, 41);
             this.btAgainAC.TabIndex = 67;
             this.btAgainAC.Text = "Nhập lại";
+            this.btAgainAC.Click += new System.EventHandler(this.btAgainAC_Click);
             // 
             // btDelete_AC
             // 
@@ -1962,7 +1984,7 @@
             this.tbAC.RowHeadersVisible = false;
             this.tbAC.RowHeadersWidth = 51;
             this.tbAC.RowTemplate.Height = 24;
-            this.tbAC.Size = new System.Drawing.Size(1248, 148);
+            this.tbAC.Size = new System.Drawing.Size(1269, 148);
             this.tbAC.TabIndex = 61;
             this.tbAC.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.tbAC.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -2009,7 +2031,7 @@
             this.txtUser.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUser.ForeColor = System.Drawing.Color.Black;
             this.txtUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUser.Location = new System.Drawing.Point(129, 94);
+            this.txtUser.Location = new System.Drawing.Point(128, 94);
             this.txtUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUser.Name = "txtUser";
             this.txtUser.PasswordChar = '\0';
@@ -2030,7 +2052,7 @@
             this.txtPW.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPW.ForeColor = System.Drawing.Color.Black;
             this.txtPW.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPW.Location = new System.Drawing.Point(129, 145);
+            this.txtPW.Location = new System.Drawing.Point(128, 147);
             this.txtPW.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPW.Name = "txtPW";
             this.txtPW.PasswordChar = '\0';
@@ -2052,7 +2074,7 @@
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(38, 165);
+            this.label37.Location = new System.Drawing.Point(39, 166);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(73, 20);
             this.label37.TabIndex = 38;
@@ -2072,7 +2094,7 @@
             // 
             this.txtSearchAC.AutoRoundedCorners = true;
             this.txtSearchAC.BorderColor = System.Drawing.Color.LightGray;
-            this.txtSearchAC.BorderRadius = 19;
+            this.txtSearchAC.BorderRadius = 20;
             this.txtSearchAC.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSearchAC.DefaultText = "";
             this.txtSearchAC.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -2093,7 +2115,7 @@
             this.txtSearchAC.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtSearchAC.PlaceholderText = "Tìm tài khoản";
             this.txtSearchAC.SelectedText = "";
-            this.txtSearchAC.Size = new System.Drawing.Size(355, 41);
+            this.txtSearchAC.Size = new System.Drawing.Size(419, 43);
             this.txtSearchAC.TabIndex = 51;
             this.txtSearchAC.Tag = "";
             this.txtSearchAC.TextChanged += new System.EventHandler(this.txtSearchAC_TextChanged);
@@ -2147,44 +2169,6 @@
             this.label40.Size = new System.Drawing.Size(151, 23);
             this.label40.TabIndex = 88;
             this.label40.Text = "Quản lý tài khoản";
-            // 
-            // cbMsvAC
-            // 
-            this.cbMsvAC.BackColor = System.Drawing.Color.Transparent;
-            this.cbMsvAC.BorderColor = System.Drawing.Color.Black;
-            this.cbMsvAC.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbMsvAC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbMsvAC.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbMsvAC.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbMsvAC.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbMsvAC.ForeColor = System.Drawing.Color.Black;
-            this.cbMsvAC.ItemHeight = 30;
-            this.cbMsvAC.Items.AddRange(new object[] {
-            "Admin",
-            "User"});
-            this.cbMsvAC.Location = new System.Drawing.Point(660, 98);
-            this.cbMsvAC.Name = "cbMsvAC";
-            this.cbMsvAC.Size = new System.Drawing.Size(270, 36);
-            this.cbMsvAC.TabIndex = 72;
-            // 
-            // cbMgvAC
-            // 
-            this.cbMgvAC.BackColor = System.Drawing.Color.Transparent;
-            this.cbMgvAC.BorderColor = System.Drawing.Color.Black;
-            this.cbMgvAC.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbMgvAC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbMgvAC.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbMgvAC.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbMgvAC.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbMgvAC.ForeColor = System.Drawing.Color.Black;
-            this.cbMgvAC.ItemHeight = 30;
-            this.cbMgvAC.Items.AddRange(new object[] {
-            "Admin",
-            "User"});
-            this.cbMgvAC.Location = new System.Drawing.Point(660, 149);
-            this.cbMgvAC.Name = "cbMgvAC";
-            this.cbMgvAC.Size = new System.Drawing.Size(270, 36);
-            this.cbMgvAC.TabIndex = 73;
             // 
             // Admin
             // 
@@ -2314,7 +2298,6 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label35;
         private Guna.UI2.WinForms.Guna2TextBox txtSearchLop;
-        private Guna.UI2.WinForms.Guna2Button btSearchLop;
         private Guna.UI2.WinForms.Guna2Button btAddLop;
         private Guna.UI2.WinForms.Guna2Button btFixLop;
         private System.Windows.Forms.Panel panel8;

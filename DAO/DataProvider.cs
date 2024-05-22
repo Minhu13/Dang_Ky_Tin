@@ -953,7 +953,7 @@ namespace Đăng_Ký_Tín.DAO
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@tuser", "%" + tuser + "%");
-                command.Parameters.AddWithValue("@maSinhVien", "%" + vaitro + "%");
+                command.Parameters.AddWithValue("@vtro", "%" + vaitro + "%");
 
                 DataTable dataTable = new DataTable();
 

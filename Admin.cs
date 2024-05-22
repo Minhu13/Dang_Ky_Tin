@@ -272,6 +272,14 @@ namespace Đăng_Ký_Tín
             txtTL_Lop.Clear();
             txtCVHT.Clear();
         }
+        private void ClearAC()
+        {
+            txtUser.Clear();
+            txtPW.Clear();
+            cbVaiTro.SelectedIndex = -1;
+            cbMgvAC.SelectedItem = -1;
+            cbMsvAC.SelectedIndex = -1;
+        }
         private void LoadDataSVDataGridView()
         {
             try
@@ -655,8 +663,7 @@ namespace Đăng_Ký_Tín
             LoadDataLopDataGridView();
             ClearLopFields();
         }
-
-        private void btSearchLop_Click(object sender, EventArgs e)
+        private void txtSearchLop_TextChanged(object sender, EventArgs e)
         {
             try
             {
@@ -671,17 +678,17 @@ namespace Đăng_Ký_Tín
                     {
                         // Hiển thị kết quả tìm kiếm lên DataGridView tbSV
                         tbLop.DataSource = searchResult;
-                        MessageBox.Show("Tìm thấy lớp thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //MessageBox.Show("Tìm thấy lớp thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
                         // Nếu không tìm thấy kết quả
-                        MessageBox.Show("Không tìm thấy lớp nào phù hợp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //MessageBox.Show("Không tìm thấy lớp nào phù hợp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Vui lòng nhập từ khóa để tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //MessageBox.Show("Vui lòng nhập từ khóa để tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -689,7 +696,6 @@ namespace Đăng_Ký_Tín
                 MessageBox.Show($"Lỗi khi tìm kiếm lớp: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         //Môn học phần
         private void LoadDataLHPDataGridView()
         {
@@ -732,7 +738,7 @@ namespace Đăng_Ký_Tín
             txtSS.Clear();
             cbMDK.SelectedIndex = -1;
             cbMGV.SelectedIndex = -1;
-            cbHKHP.SelectedIndex = -1;
+            cbHKHP.SelectedIndex = 0;
         }
 
         private void addLHP_Click(object sender, EventArgs e)
@@ -945,6 +951,7 @@ namespace Đăng_Ký_Tín
                 {
                     MessageBox.Show("Thêm tài khoản mới thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadDataACDataGridView();
+                    ClearAC();
                 }
                 else
                 {
@@ -977,6 +984,7 @@ namespace Đăng_Ký_Tín
 
                     MessageBox.Show("Sửa tài khoản thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadDataACDataGridView();
+                    ClearAC();
                 }
                 else
                 {
@@ -1012,6 +1020,7 @@ namespace Đăng_Ký_Tín
 
                     // Sau khi xóa sinh viên thành công, làm mới DataGridView
                     LoadDataACDataGridView();
+                    ClearAC();
                 }
                 else
                 {
@@ -1065,5 +1074,11 @@ namespace Đăng_Ký_Tín
                 cbMgvAC.SelectedItem = row.Cells["Mã giảng viên"].Value.ToString();
             }
         }
+
+        private void btAgainAC_Click(object sender, EventArgs e)
+        {
+            ClearAC();
+        }
+
     }
 }

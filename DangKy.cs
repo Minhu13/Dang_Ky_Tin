@@ -161,7 +161,16 @@ WHERE
             if (guna2RadioButton1.Checked)
             {
                 LoadDataGridView(); // Gọi hàm để load dữ liệu vào DataGridView khi RadioButton được chọn
-            } 
+                btChoice.Visible = true;
+            }
+        }
+        private void guna2RadioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (guna2RadioButton2.Checked)
+            {
+                guna2DataGridView1.Visible = false;
+                btChoice.Visible = false;
+            }
         }
         private void btDangKy_Click(object sender, EventArgs e)
         {
