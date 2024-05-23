@@ -220,7 +220,6 @@
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 30);
             this.guna2ControlBox1.TabIndex = 1;
-            this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
             // guna2ControlBox3
             // 
@@ -268,7 +267,6 @@
             this.guna2Panel_control.Name = "guna2Panel_control";
             this.guna2Panel_control.Size = new System.Drawing.Size(1256, 654);
             this.guna2Panel_control.TabIndex = 10;
-            this.guna2Panel_control.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel_control_Paint);
             // 
             // panel2
             // 

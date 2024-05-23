@@ -32,11 +32,13 @@ namespace Đăng_Ký_Tín
 
             if (role == "User")
             {
+                AddContainer(new Home());
                 guna2GradientTileButton4.Visible = false;
                 label1.Visible = true;
             }
             if (role == "Admin")
             {
+                AddContainer(new Home());
                 guna2GradientTileButton2.Visible = false;
                 DKcontrol.Visible = false;
                 label2.Visible = true;
@@ -137,18 +139,6 @@ namespace Đăng_Ký_Tín
            this.Close();
         }
 
-        private void guna2ControlBox1_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Bạn có muốn thoát chương trình?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                this.Close();
-            }
-        }
-
-        private void guna2Panel_control_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
  
